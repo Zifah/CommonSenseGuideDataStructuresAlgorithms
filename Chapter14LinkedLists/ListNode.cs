@@ -6,8 +6,8 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 {
     public class ListNode
     {
-        public string Data { get; private set; }
-        public ListNode NextNode { get; set; }
+        public virtual  string Data { get; private set; }
+        public virtual ListNode NextNode { get; set; }
 
         public ListNode(string data)
         {

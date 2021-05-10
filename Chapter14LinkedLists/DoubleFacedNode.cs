@@ -6,7 +6,7 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 {
     public class DoubleFacedNode : ListNode
     {
-        public ListNode PreviousNode { get; set; }
+        public DoubleFacedNode PreviousNode { get; set; }
 
         public DoubleFacedNode(string data) : base(data)
         {

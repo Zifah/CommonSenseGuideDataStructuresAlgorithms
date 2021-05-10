@@ -6,7 +6,7 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 {
     public class DoublyLinkedList : LinkedList
     {
-        public ListNode LastNode { get; set; }
+        public DoubleFacedNode LastNode { get; set; }
 
         public DoublyLinkedList(DoubleFacedNode firstNode = null, DoubleFacedNode lastNode = null) : base(firstNode)
         {
@@ -28,6 +28,16 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
                 newNode.PreviousNode = LastNode;
                 LastNode.NextNode = newNode;
                 LastNode = newNode;
+            }
+        }
+
+        public void PrintElementInReverse_Ex14_2(Action<string> printData)
+        {
+            DoubleFacedNode currentNode = LastNode;
+            while (currentNode != null)
+            {
+                printData(currentNode.Data);
+                currentNode = (DoubleFacedNode)currentNode.PreviousNode;
             }
         }
     }

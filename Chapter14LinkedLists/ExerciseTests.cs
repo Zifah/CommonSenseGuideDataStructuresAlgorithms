@@ -24,5 +24,24 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 
             // Observe what gets printed out
         }
+        public static void TestDoublyLinkedListPrintElementsInReverse()
+        {
+            // Create a linked list with three nodes
+            var linkedList = new DoublyLinkedList();
+
+            linkedList.InsertAtEnd("Hafiz");
+            linkedList.InsertAtEnd("Eats");
+            linkedList.InsertAtEnd("Lots");
+            linkedList.InsertAtEnd("Of");
+            linkedList.InsertAtEnd("Icecream");
+
+            // Create a print method
+            Action<string> printAction = (string data) => { Console.WriteLine(data); };
+
+            // Pass this linked list to the new method
+            linkedList.PrintElementInReverse_Ex14_2(printAction);
+
+            // Observe what gets printed out
+        }
     }
 }

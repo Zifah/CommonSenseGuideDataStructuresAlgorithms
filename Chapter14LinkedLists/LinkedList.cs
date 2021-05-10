@@ -50,7 +50,6 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 
         }
 
-
         public void PrintElements_Ex14_1(Action<string> printData)
         {
             ListNode currentNode = FirstNode;
