@@ -24,6 +24,7 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 
             // Observe what gets printed out
         }
+
         public static void TestDoublyLinkedListPrintElementsInReverse()
         {
             // Create a linked list with three nodes
@@ -42,6 +43,20 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
             linkedList.PrintElementInReverse_Ex14_2(printAction);
 
             // Observe what gets printed out
+        }
+
+        public static ListNode TestGetLinkedLastItem()
+        {
+            // Create a linked list with three nodes
+            var firstNode = new ListNode("Hafiz");
+            var linkedList = new LinkedList(firstNode);
+            linkedList.Append("Eats");
+            linkedList.Append("Lots");
+            linkedList.Append("Of");
+            linkedList.Append("Icecream");
+
+            // Pass this linked list to the new method
+            return linkedList.GetLastItem_Ex14_3();
         }
     }
 }

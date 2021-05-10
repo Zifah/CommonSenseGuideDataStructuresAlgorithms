@@ -59,5 +59,19 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
                 currentNode = currentNode.NextNode;
             }
         }
+
+        public ListNode GetLastItem_Ex14_3()
+        {
+            return GetLastItem(FirstNode);
+        }
+
+        private ListNode GetLastItem(ListNode firstNode)
+        {
+            if(firstNode.NextNode == null)
+            {
+                return firstNode;
+            }
+            return GetLastItem(firstNode.NextNode);
+        }
     }
 }

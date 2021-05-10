@@ -7,7 +7,7 @@ namespace CommonSenseGuideDataStructuresAlgorithms
     {
         static void Main(string[] args)
         {
-            ExerciseTests.TestDoublyLinkedListPrintElementsInReverse();
+            Console.WriteLine(ExerciseTests.TestGetLinkedLastItem()?.Data);
         }
     }
 }
