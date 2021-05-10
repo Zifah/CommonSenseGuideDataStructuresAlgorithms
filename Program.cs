@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists;
+using System;
 
 namespace CommonSenseGuideDataStructuresAlgorithms
 {
@@ -6,7 +7,7 @@ namespace CommonSenseGuideDataStructuresAlgorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ExerciseTests.TestLinkedListPrintElements();
         }
     }
 }
