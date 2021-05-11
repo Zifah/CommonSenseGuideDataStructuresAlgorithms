@@ -8,6 +8,11 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
     {
         public ListNode FirstNode { get; set; }
 
+        public LinkedList()
+        {
+
+        }
+
         public LinkedList(ListNode firstNode)
         {
             FirstNode = firstNode;
@@ -78,20 +83,18 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 
         public void ReverseList_Ex14_4()
         {
-            // Put the first node into a variable
-            // Loop through the list, each time, moving the first item to the end of the list
-            // Stop the loop when the next node of the first node is the original first node
-            // Length - 1 moves will be made
-            var firstNode = FirstNode;
-            var currentNode = FirstNode;
-            while (currentNode.NextNode != firstNode)
+            var tailNode = GetLastItem_Ex14_3();
+            var nextToMove = FirstNode.NextNode;
+            var originalFirstNode = FirstNode;
+
+            while (FirstNode != tailNode)
             {
-                var nextNode = currentNode.NextNode;
-                Append(currentNode);
-                currentNode.NextNode = null;
-                currentNode = nextNode;
+                var newNextToMove = nextToMove.NextNode;
+                var oldFirstNode = FirstNode;
+                FirstNode = nextToMove;
+                nextToMove.NextNode = oldFirstNode;
+                nextToMove = originalFirstNode.NextNode = newNextToMove;
             }
-            FirstNode = currentNode;
         }
     }
 }
