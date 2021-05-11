@@ -15,8 +15,10 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 
         public ListNode Append(string data)
         {
-            var newNode = new ListNode(data);
-
+            return Append(new ListNode(data));
+        }
+        public ListNode Append(ListNode newNode)
+        {
             ListNode currentNode = FirstNode;
             bool appended = false;
             do
@@ -46,8 +48,8 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
                 newNode.NextNode = FirstNode;
                 FirstNode = newNode;
             }
-            return newNode;
 
+            return newNode;
         }
 
         public void PrintElements_Ex14_1(Action<string> printData)
@@ -67,11 +69,29 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
 
         private ListNode GetLastItem(ListNode firstNode)
         {
-            if(firstNode.NextNode == null)
+            if (firstNode.NextNode == null)
             {
                 return firstNode;
             }
             return GetLastItem(firstNode.NextNode);
+        }
+
+        public void ReverseList_Ex14_4()
+        {
+            // Put the first node into a variable
+            // Loop through the list, each time, moving the first item to the end of the list
+            // Stop the loop when the next node of the first node is the original first node
+            // Length - 1 moves will be made
+            var firstNode = FirstNode;
+            var currentNode = FirstNode;
+            while (currentNode.NextNode != firstNode)
+            {
+                var nextNode = currentNode.NextNode;
+                Append(currentNode);
+                currentNode.NextNode = null;
+                currentNode = nextNode;
+            }
+            FirstNode = currentNode;
         }
     }
 }
