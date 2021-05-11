@@ -57,6 +57,24 @@ namespace CommonSenseGuideDataStructuresAlgorithms.Chapter14LinkedLists
             return newNode;
         }
 
+        public ListNode Read(int index)
+        {
+            // We begin at the first node of the list:​
+            var currentNode = FirstNode;
+            int currentIndex = 0;
+
+            while (currentIndex < index)
+            {
+                // We keep following the links of each node until we get to the index we're looking for
+                currentNode = currentNode.NextNode;
+                currentIndex += 1;
+
+                if (currentNode == null) return null;
+            }
+
+            return currentNode;
+        }
+
         public void PrintElements_Ex14_1(Action<string> printData)
         {
             ListNode currentNode = FirstNode;
