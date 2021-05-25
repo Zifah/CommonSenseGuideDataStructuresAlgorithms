@@ -7,7 +7,7 @@ namespace CommonSenseGuideDataStructuresAlgorithms
     {
         static void Main(string[] args)
         {
-            ExerciseTests.DeleteDetachedNodeFromLinkedList();
+            ExerciseTests.DeleteDetachedNodeFromLinkedList_Ex14_5();
         }
     }
 }
